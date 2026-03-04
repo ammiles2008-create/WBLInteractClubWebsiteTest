@@ -14,6 +14,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
+          integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+          crossorigin="anonymous"></script>
     </head>
 
     <!-- HTML Content of the Webpage-->
@@ -21,18 +26,26 @@
         <header>
             <nav>
                 <span>
-                    <li id = "logo"><img src = "interactClubLogo.png"></li>
+                    <img src = "interactClubLogo.png" id = "logo_top">
                 </span>
                 <ul class = "nav_links">
-                    <li></li>
                     <li class = "nav_item"><a href = "index.html">Home</a></li>
                     <li class = "nav_item"><a href = "eventsignup.html">Event Sign Ups</a></li>
                     <li class = "nav_item"><a href = "calendar.html">Calendar</a></li>
                 </ul>
             </nav>
             <div>
+                <img src = "interactClubLogo.png" id = "logo_middle">
+                <span><h1>Interact Club</h1></span>
             </div>
         </header>
+        <script>
+            $("li a").hover(function(){
+                $(this).css("color", "black");
+            }, function(){
+                $(this).css("color", "gray");
+            });
+        </script>
     </body>
 </html>
 
