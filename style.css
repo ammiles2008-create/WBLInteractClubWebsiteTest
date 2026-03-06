@@ -36,7 +36,7 @@ ul li a {
     width: 50px;
 }
 
-header img{
+header div img{
     display: inline-block;
     height: 10%;
     width: 10%;
@@ -49,7 +49,7 @@ header img{
     margin-right: 20%;
 }
 
-header header h1{
+header div h1{
     display: inline-block;
     text-align: center;
     margin-right: 20px;
@@ -59,7 +59,7 @@ header header h1{
     font-size: 3vw;
 }
 
-header header {
+header div {
     display: flex;
     align-items: center;      /* vertically centers items */
     justify-content: center;  /* optional: centers them horizontally */
@@ -71,47 +71,64 @@ header header {
     margin-left: 20%;
 }
 
-header{
+header div{
     clear:both;
 }
 
-.nav_item{
-    float: right;
-}
-
-/*
-nav{
-    display: flex;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-li{
+#subheader{
     display: inline-block;
-    margin: auto;
-    background-color: red;
-}
-
-img{
-    
-    margin-right: 10%;
-    margin-left: 0%;
+    text-align: center;
     padding-top: 2vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
     padding-bottom: 2vh;
-
-    height: 10%;
-    width: 10%;
-    
-    background-color: red;
+    padding-right: 25vw;
+    padding-left: 25vw;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    background-color: #EAEAEA;
 }
-*/
 
+#description{
+    display: inline-block;
+    text-align: left;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    margin-right: 0;
+    margin-left: 0;
+    align-items: left;
+    justify-content: left;
+    font-size: 1.5vw;
+    background-color: #00401F;
+    color: white;
+    line-height: 4vh;
+}
 
+#description a{
+    text-decoration: underline;
+    color: white;
+}
+
+#red{
+    color: red;
+}
+
+#eventDescriptionsTitle
+{
+    display: inline-block;
+    text-align: center;
+    padding-right: 35vw;
+    padding-left: 35vw;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+}
 
 /* End of CSS Document */
