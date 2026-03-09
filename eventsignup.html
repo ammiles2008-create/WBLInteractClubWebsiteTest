@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <!-- Metadata & CSS Content of the Webpage -->
+    <head>
+        <!-- Metadata (name of the webpage)-->
+        <title>Event Sign Ups</title>
+        <!-- CSS File Link -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
+          integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+          crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <!-- HTML Content of the Webpage-->
+    <body>
+        <header>
+            <nav>
+                <span>
+                    <img src = "Pictures/interactClubLogo.png" id = "logo_top">
+                </span>
+                <ul>
+                    <li><a href = "Pictures/index.html">Home</a></li>
+                    <li><a href = "Pictures/eventsignup.html">Event Sign Ups</a></li>
+                    <li><a href = "Pictures/calendar.html">Calendar</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h1 id = "otherHeaders">Event Sign Ups</h1>
+            </div>
+        </header>
+
+        <div class = "container">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true"></iframe>
+        </div>
+        
+        <script>
+            $("li a").hover(function(){
+                $(this).css("color", "black");
+            }, function(){
+                $(this).css("color", "gray");
+            });
+        </script>
+    </body>
+</html>
+
