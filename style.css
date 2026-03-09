@@ -61,18 +61,15 @@ header div h1{
 
 header div {
     display: flex;
-    align-items: center;      /* vertically centers items */
-    justify-content: center;  /* optional: centers them horizontally */
-    gap: 20px;                /* optional: spacing between items */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;                
+    clear:both;
 }
 
 
 #logo_middle{
     margin-left: 20%;
-}
-
-header div{
-    clear:both;
 }
 
 #subheader{
@@ -99,8 +96,6 @@ header div{
     padding-bottom: 2vh;
     padding-right: 5vw;
     padding-left: 5vw;
-    margin-right: 0;
-    margin-left: 0;
     align-items: left;
     justify-content: left;
     font-size: 1.5vw;
@@ -129,6 +124,34 @@ header div{
     margin-top: 5vh;
     align-items: center;
     justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.container div{
+    align-items: center;
+    margin:auto;
+    width: 20%;
+    height: 30vh;
+}
+
+#lifeCare_img{
+    height: 10vh;
+    width: 30vw;
+}
+#projectCURE_img{
+    height: 10vh;
+    width: 30vw;
+}
+
+#peacefulSchools_img{
+    height: 10vh;
+    width: 30vw;
 }
 
 /* End of CSS Document */
