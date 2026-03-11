@@ -89,13 +89,13 @@ header div {
     text-align: center;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    padding-right: 5.5vw;
-    padding-left: 5.5vw;
+    width: 100%;
     align-items: center;
     justify-content: center;
     font-size: 1.5vw;
     font-weight: bold;
     background-color: #EAEAEA;
+    line-height: 4vh;
 }
 
 #description{
