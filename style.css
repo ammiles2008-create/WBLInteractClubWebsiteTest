@@ -148,11 +148,11 @@ header div {
 }
 
 .container .flex_img{
+    display: flex;
     padding: 0;
+    flex-wrap: wrap;
     width: 33vw;
     height: 33vh;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 iframe{
