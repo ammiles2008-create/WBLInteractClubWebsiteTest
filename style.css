@@ -150,8 +150,8 @@ header div {
 
 .flex_img{
     padding: 0;
-    width: 33%;
-    height: auto;
+    width: 33vw;
+    height: 33vh;
     align-items: center;
     align-content: center;
     align-self: center;
