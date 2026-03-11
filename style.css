@@ -132,11 +132,10 @@ header div {
 {
     display: inline-block;
     text-align: center;
-    padding-right: 35vw;
-    padding-left: 35vw;
-    margin-right: 0;
-    margin-left: 0;
     margin-top: 5vh;
+    margin-bottom: 2vh;
+    padding: 0;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
@@ -147,12 +146,6 @@ header div {
     align-items: center;
     justify-content: center;
     gap: 2vw;
-}
-
-.container .bottom{
-    align-items: center;
-    width: 20vw;
-    height: 30vh;
 }
 
 .flex_img{
