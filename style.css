@@ -98,7 +98,7 @@ header div {
 }
 
 #subheader p{
-    line-height: 1;
+    line-height: 2;
 }
 
 #description{
@@ -159,7 +159,7 @@ header div {
 
 .flex_img{
     height: 20vh;
-    width: 20vw;
+    width: auto;
     align-items: center;
     align-content: center;
     align-self: center;
