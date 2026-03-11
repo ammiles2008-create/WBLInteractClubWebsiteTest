@@ -95,7 +95,7 @@ header div {
     font-size: 1.5vw;
     font-weight: bold;
     background-color: #EAEAEA;
-    line-height: 4vh;
+    line-height: 2;
 }
 
 #description{
@@ -110,7 +110,7 @@ header div {
     font-size: 1.5vw;
     background-color: #00401F;
     color: white;
-    line-height: 4vh;
+    line-height: 2;
 }
 
 #description a{
@@ -152,7 +152,7 @@ header div {
 }
 
 #lifeCare_img{
-    height: 10vh;
+    height: 20vh;
     width: 20vw;
     align-items: center;
     align-content: center;
@@ -161,7 +161,7 @@ header div {
 }
 
 #projectCURE_img{
-    height: 10vh;
+    height: 20vh;
     width: 20vw;
     align-items: center;
     align-content: center;
@@ -170,7 +170,7 @@ header div {
 }
 
 #peacefulSchools_img{
-    height: 10vh;
+    height: 20vh;
     width: 20vw;
     align-items: center;
     align-content: center;
