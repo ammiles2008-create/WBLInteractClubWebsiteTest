@@ -136,6 +136,7 @@ header div {
     margin-bottom: 2vh;
     padding: 0;
     width: 100%;
+    font-size: 3vw;
     align-items: center;
     justify-content: center;
 }
@@ -144,14 +145,14 @@ header div {
     display: flex;
     align-content: center;
     justify-content: center;
+    flex-wrap: nowrap;
+    align-items: flex-start;
     gap: 2vw;
 }
 
 .container .flex_img{
-    display: flex;
     padding: 0;
-    flex-wrap: wrap;
-    width: 20vw;
+    width: 30%;
     height: auto;
 }
 
