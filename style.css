@@ -143,15 +143,16 @@ header div {
 .container{
     display: flex;
     align-content: center;
-    align-items: center;
     justify-content: center;
     gap: 2vw;
 }
 
-.flex_img{
+.container .flex_img{
     padding: 0;
     width: 33vw;
     height: 33vh;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 iframe{
