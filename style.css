@@ -152,10 +152,6 @@ header div {
     padding: 0;
     width: 33vw;
     height: 33vh;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
 }
 
 iframe{
