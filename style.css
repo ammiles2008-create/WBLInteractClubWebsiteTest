@@ -150,7 +150,7 @@ header div {
     gap: 2vw;
 }
 
-.container div{
+.container .bottom{
     align-items: center;
     margin:auto;
     width: 20%;
@@ -158,8 +158,8 @@ header div {
 }
 
 .flex_img{
-    max-height: 20vh;
-    max-width: 20vw;
+    height: 20vh;
+    width: 20vw;
     align-items: center;
     align-content: center;
     align-self: center;
