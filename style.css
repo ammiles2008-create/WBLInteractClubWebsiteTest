@@ -144,7 +144,6 @@ header div {
 .container{
     display: flex;
     align-content: center;
-    align-self: center;
     align-items: center;
     justify-content: center;
     gap: 2vw;
@@ -157,8 +156,8 @@ header div {
 }
 
 .flex_img{
-    height: 30vh;
-    width: 20vw;
+    height: auto;
+    width: auto;
     align-items: center;
     align-content: center;
     align-self: center;
