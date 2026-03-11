@@ -98,7 +98,7 @@ header div {
 }
 
 #subheader p{
-    line-height: 3;
+    line-height: 2;
 }
 
 #description{
@@ -121,7 +121,7 @@ header div {
 }
 
 #description p{
-    line-height: 3;
+    line-height: 2;
 }
 
 #red{
@@ -158,8 +158,8 @@ header div {
 }
 
 .flex_img{
-    max-height: auto;
-    max-width: auto;
+    max-height: 20vh;
+    max-width: 20vw;
     align-items: center;
     align-content: center;
     align-self: center;
