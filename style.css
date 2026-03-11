@@ -95,6 +95,9 @@ header div {
     font-size: 1.5vw;
     font-weight: bold;
     background-color: #EAEAEA;
+}
+
+#subheader p{
     line-height: 3;
 }
 
@@ -110,12 +113,15 @@ header div {
     font-size: 1.5vw;
     background-color: #00401F;
     color: white;
-    line-height: 3;
 }
 
 #description a{
     text-decoration: underline;
     color: white;
+}
+
+#description p{
+    line-height: 3;
 }
 
 #red{
@@ -152,8 +158,8 @@ header div {
 }
 
 .flex_img{
-    height: auto;
-    width: auto;
+    max-height: auto;
+    max-width: auto;
     align-items: center;
     align-content: center;
     align-self: center;
