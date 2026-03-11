@@ -151,8 +151,8 @@ header div {
     display: flex;
     padding: 0;
     flex-wrap: wrap;
-    width: 33vw;
-    height: 33vh;
+    width: 20vw;
+    height: auto;
 }
 
 iframe{
