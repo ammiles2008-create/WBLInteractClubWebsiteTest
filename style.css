@@ -164,16 +164,28 @@ iframe{
     height: 50vh;
 }
 
-#eventSignUpLinkTitle{
-    display: inline-block;
-    text-align: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    padding: 0;
-    width: 100%;
-    font-size: 3vw;
+#buttonDiv{
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+button {
+    display: flex;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 2vh 4vw;
+    font-size: 3vw;
+    background-color: #00401F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: gray;
 }
 
 /* End of CSS Document */
