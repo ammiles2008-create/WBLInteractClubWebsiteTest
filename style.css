@@ -164,4 +164,16 @@ iframe{
     height: 50vh;
 }
 
+#eventSignUpLinkTitle{
+    display: inline-block;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 0;
+    width: 100%;
+    font-size: 3vw;
+    align-items: center;
+    justify-content: center;
+}
+
 /* End of CSS Document */
