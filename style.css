@@ -171,7 +171,13 @@ iframe{
     width: 100%;
 }
 
-button {
+#buttonLink:hover{
+    background-color: gray;
+}
+
+#buttonLink {
+    color: white;
+    text-decoration: none;
     display: flex;
     margin-top: 2vh;
     margin-bottom: 2vh;
@@ -182,10 +188,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover{
-    background-color: gray;
+    position: relative;
+    z-index: 10;
 }
 
 /* End of CSS Document */
