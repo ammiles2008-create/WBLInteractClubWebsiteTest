@@ -152,8 +152,10 @@ header div {
 
 .container .flex_img{
     padding: 0;
-    width: 30%;
+    width: auto;
     height: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 iframe{
