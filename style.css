@@ -192,4 +192,18 @@ iframe{
     z-index: 10;
 }
 
+#calendarSubTitle{
+    display: inline-block;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    background-color: #00401F;
+}
+
 /* End of CSS Document */
