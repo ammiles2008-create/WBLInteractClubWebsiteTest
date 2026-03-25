@@ -150,10 +150,10 @@ header div {
     gap: 2vw;
 }
 
-.container .flex_img{
+.flex_img{
     padding: 0;
-    width: auto;
-    height: auto;
+    width: 20vw;
+    height: 20vh;
     align-items: center;
     justify-content: center;
 }
