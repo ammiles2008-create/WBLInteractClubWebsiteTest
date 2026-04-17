@@ -49,7 +49,9 @@
             <img src = "Pictures/peacefulSchools.png" id = "flex_img">
         </div>
         <div id = "buttonDiv">
-            <a  id = "buttonLink">Sign Up Here</a>
+            <a  id = "buttonLink1">Sign Up</a>
+            <a  id = "buttonLink2">Take Your Name Off</a>
+            <a  id = "buttonLink3">See Others Signed Up</a>
         </div>
 
         <div>
@@ -58,7 +60,7 @@
 
         
         <script>
-            var click = 0;
+            var user_num = 0;
 
             $("li a").hover(function(){
                 $(this).css("color", "black");
@@ -70,17 +72,40 @@
                 window.location.href = 'index.html';
             });
 
-            $("#buttonDiv").click(function(){
-                click++;
+            $("#buttonLink1").click(function(){
+                user_num++;
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
                 var phone = prompt("What is your phone number?");
                 var password = prompt("What password would you like to use?");
-                localStorage.setItem("user" + click, name);
-                localStorage.setItem("email" + click, email);
-                localStorage.setItem("phone" + click, phone);
-                localStorage.setItem("password"+ click, password);
+                localStorage.setItem("user" + user_num, name);
+                localStorage.setItem("email" + user_num, email);
+                localStorage.setItem("phone" + user_num, phone);
+                localStorage.setItem("password"+ user_num, password);
                 $("#list").append("<p>" + name + " " + email + " " + phone + " " + password + "</p>");
+            });
+
+            $("#buttonLink2").click(function(){
+                var name = prompt("What is your name?");
+                var password = prompt("What is your password?");
+                for (var i = 1; i <= user_num; i++)
+                {
+                    if (localStorage.getItem("user" + i) == name && localStorage.getItem("password" + i) == password)
+                    {
+                        localStorage.removeItem("user" + i);
+                        localStorage.removeItem("email" + i);
+                        localStorage.removeItem("phone" + i);
+                        localStorage.removeItem("password" + i);
+                    }
+                }
+            });
+            $("#buttonLink3").click(function(){
+                var name = prompt("What is your name?");
+                var password = prompt("What is your password?");
+                for (var i = 1; i <= user_num; i++)
+                {
+                        $("#list").append("<p>" + localStorage.getItem("user" + i) + " " + "</p>");
+                }
             });
         </script>
     </body>
