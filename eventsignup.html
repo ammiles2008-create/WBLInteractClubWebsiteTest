@@ -82,7 +82,6 @@
                 localStorage.setItem("email" + user_num, email);
                 localStorage.setItem("phone" + user_num, phone);
                 localStorage.setItem("password"+ user_num, password);
-                $("#list").append("<p>" + name + " " + email + " " + phone + " " + password + "</p>");
             });
 
             $("#buttonLink2").click(function(){
@@ -100,8 +99,6 @@
                 }
             });
             $("#buttonLink3").click(function(){
-                var name = prompt("What is your name?");
-                var password = prompt("What is your password?");
                 for (var i = 1; i <= user_num; i++)
                 {
                         $("#list").append("<p>" + localStorage.getItem("user" + i) + " " + "</p>");
