@@ -150,10 +150,11 @@ header div {
     gap: 2vw;
 }
 
-.flex_img{
+#flex_img{
     padding: 0;
-    width: auto;
-    height: auto;
+    width: 40vw;
+    height: 10vh;
+    margin-top: 2.5vh;
     align-items: center;
     justify-content: center;
 }
@@ -181,8 +182,8 @@ iframe{
     display: flex;
     margin-top: 4vh;
     margin-bottom: 2vh;
-    padding: 2vh 4vw;
-    font-size: 3vw;
+    padding: 1vh 2vw;
+    font-size: 2vw;
     background-color: #00401F;
     color: white;
     border: none;

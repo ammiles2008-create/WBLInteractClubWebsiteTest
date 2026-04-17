@@ -42,14 +42,24 @@
                 <p> Check out the event sign ups below if you're interested! </p>
             </div>
         </div>
-        <div class = "container">
+        <!-- <div class = "container">
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true" contenteditable="true"></iframe>
+        </div> -->
+        <div class= "container">
+            <img src = "Pictures/peacefulSchools.png" id = "flex_img">
         </div>
         <div id = "buttonDiv">
-            <a  id = "buttonLink" href="https://docs.google.com/document/d/1Nw2QD78QnHLbv1vSnDNUGsefHnV8UW_YoDeJJIf0xLM/edit?tab=t.0" target = "_blank">Sign Up Here</a>
+            <a  id = "buttonLink">Sign Up Here</a>
         </div>
+
+        <div>
+            <p id = "list"></p>
+        </div>
+
         
         <script>
+            var click = 0;
+
             $("li a").hover(function(){
                 $(this).css("color", "black");
             }, function(){
@@ -58,6 +68,19 @@
 
             $("#logo_top").click(function(){
                 window.location.href = 'index.html';
+            });
+
+            $("#buttonDiv").click(function(){
+                click++;
+                var name = prompt("What is your name?");
+                var email = prompt("What is your email?");
+                var phone = prompt("What is your phone number?");
+                var password = prompt("What password would you like to use?");
+                localStorage.setItem("user" + click, name);
+                localStorage.setItem("email" + click, email);
+                localStorage.setItem("phone" + click, phone);
+                localStorage.setItem("password"+ click, password);
+                $("#list").append("<p>" + name + " " + email + " " + phone + " " + password + "</p>");
             });
         </script>
     </body>
