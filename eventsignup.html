@@ -120,7 +120,6 @@
             });
             $("#buttonLink3").click(function(){
                 var userList = "";
-                $("#list").html("");
                 for (var i = 1; i <= user_num; i++)
                 {
                     if (localStorage.getItem("user" + i) != null)
@@ -133,9 +132,9 @@
                         {
                             userList += localStorage.getItem("user" + i);
                         }
-                        $("#list").html(userList);
                     }
                 }
+                $("#list").html(userList);
             });
         </script>
     </body>
