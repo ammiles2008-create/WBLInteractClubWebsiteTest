@@ -42,16 +42,28 @@
                 <p> Check out the event sign ups below if you're interested! </p>
             </div>
         </div>
-        <!-- <div class = "container">
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true" contenteditable="true"></iframe>
-        </div> -->
         <div class= "container">
-            <img src = "Pictures/peacefulSchools.png" id = "flex_img">
+            <h1 id = "otherHeaders" style = "font-size: 3vw;">Original iframe Implementation (Scroll Down for Other Technique):</h1>
+        </div>
+        <div class = "container">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true" contenteditable="true"></iframe>
         </div>
 
-        <span class = "containerNoGap">
-            <a style = "text-decoration: underline" href = "https://docs.google.com/document/d/1ERTlVIWi1pcHFligupbkcTBh4Or2MY3r35jAj8Rgyfg/edit?tab=t.0">More Details</p>
-        </span>
+        <div class = "containerNoGap">
+            <a  id = "buttonLink0">Sign Up Here</a>
+        </div>
+
+        <div class= "container">
+            <h1 id = "otherHeaders" style = "font-size: 3vw;">Built-In Sign Up Implementation:</h1>
+        </div>
+
+        <div class= "container">
+            <img src = "Pictures/peacefulSchools.png" id = "flex_img" style = "margin-top: 0.5vh;">
+        </div>
+
+        <div class = "containerNoGap">
+            <a style = "text-decoration: underline" target="_blank" href = "https://docs.google.com/document/d/1ERTlVIWi1pcHFligupbkcTBh4Or2MY3r35jAj8Rgyfg/edit?tab=t.0">More Details</p>
+            </div>
 
         <div id = "buttonDiv">
             <a  id = "buttonLink1">Sign Up</a>
@@ -74,6 +86,10 @@
 
             $("#logo_top").click(function(){
                 window.location.href = 'index.html';
+            });
+
+            $("#buttonLink0").click(function(){
+                window.location.href = 'https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true';
             });
 
             $("#buttonLink1").click(function(){
@@ -109,7 +125,7 @@
                 {
                     if (localStorage.getItem("user" + i) != null)
                     {
-                        userList += localStorage.getItem("user" + i) + " ";
+                        userList += localStorage.getItem("user" + i) + " | ";
                         $("#list").html(userList);
                     }
                 }

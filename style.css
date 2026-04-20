@@ -176,6 +176,25 @@ iframe{
     background-color: gray;
 }
 
+#buttonLink0 {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+    padding: 1vh 2vw;
+    font-size: 2vw;
+    background-color: #00401F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
 #buttonLink1 {
     color: white;
     text-decoration: none;
