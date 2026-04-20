@@ -76,7 +76,12 @@
         </div>
 
         <script>
-            var user_num = 0;
+            var user_num = localStorage.getItem("user_num");
+            if (!user_num) {
+                user_num = 0;
+            } else {
+                user_num = parseInt(user_num);
+            }
 
             $("li a").hover(function(){
                 $(this).css("color", "black");
@@ -94,6 +99,7 @@
 
             $("#buttonLink1").click(function(){
                 user_num++;
+                localStorage.setItem("user_num", user_num);
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
                 var phone = prompt("What is your phone number?");
@@ -105,6 +111,8 @@
             });
 
             $("#buttonLink2").click(function(){
+                usernum--;
+                localStorage.setItem("user_num", user_num);
                 var name = prompt("What is your name?");
                 var password = prompt("What is your password?");
                 for (var i = 1; i <= user_num; i++)
@@ -124,13 +132,6 @@
                 {
                     if (localStorage.getItem("user" + i) != null)
                     {
-                        userList += localStorage.getItem("user" + i);
-                    }
-                }
-                /*for (var i = 1; i <= user_num; i++)
-                {
-                    if (localStorage.getItem("user" + i) != null)
-                    {
                         if (localStorage.getItem("user" + (i + 1)) != null)
                         {
                             userList += localStorage.getItem("user" + i) + " | ";
@@ -140,7 +141,7 @@
                             userList += localStorage.getItem("user" + i);
                         }
                     }
-                }*/
+                }
                 $("#list").html(userList);
             });
         </script>
