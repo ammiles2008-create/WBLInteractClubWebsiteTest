@@ -79,8 +79,9 @@
             var user_num = localStorage.getItem("user_num");
             if (!user_num) {
                 user_num = 0;
+                localStorage.setItem("user_num", user_num);
             } else {
-                user_num = parseInt(user_num);
+                user_num = parseInt(localStorage.getItem("user_num"));
             }
 
             $("li a").hover(function(){
