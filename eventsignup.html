@@ -124,6 +124,13 @@
                 {
                     if (localStorage.getItem("user" + i) != null)
                     {
+                        userList += localStorage.getItem("user" + i);
+                    }
+                }
+                /*for (var i = 1; i <= user_num; i++)
+                {
+                    if (localStorage.getItem("user" + i) != null)
+                    {
                         if (localStorage.getItem("user" + (i + 1)) != null)
                         {
                             userList += localStorage.getItem("user" + i) + " | ";
@@ -133,7 +140,7 @@
                             userList += localStorage.getItem("user" + i);
                         }
                     }
-                }
+                }*/
                 $("#list").html(userList);
             });
         </script>
