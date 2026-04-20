@@ -48,17 +48,21 @@
         <div class= "container">
             <img src = "Pictures/peacefulSchools.png" id = "flex_img">
         </div>
+
+        <span class = "containerNoGap">
+            <a style = "text-decoration: underline" href = "https://docs.google.com/document/d/1ERTlVIWi1pcHFligupbkcTBh4Or2MY3r35jAj8Rgyfg/edit?tab=t.0">More Details</p>
+        </span>
+
         <div id = "buttonDiv">
             <a  id = "buttonLink1">Sign Up</a>
             <a  id = "buttonLink2">Take Your Name Off</a>
             <a  id = "buttonLink3">See Others Signed Up</a>
         </div>
 
-        <div>
+        <div class = "container">
             <p id = "list"></p>
         </div>
 
-        
         <script>
             var user_num = 0;
 
@@ -99,9 +103,15 @@
                 }
             });
             $("#buttonLink3").click(function(){
+                var userList = "";
+                $("#list").html("");
                 for (var i = 1; i <= user_num; i++)
                 {
-                        $("#list").append("<p>" + localStorage.getItem("user" + i) + " " + "</p>");
+                    if (localStorage.getItem("user" + i) != null)
+                    {
+                        userList += localStorage.getItem("user" + i) + " ";
+                        $("#list").html(userList);
+                    }
                 }
             });
         </script>
