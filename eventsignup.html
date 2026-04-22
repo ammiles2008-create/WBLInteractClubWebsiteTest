@@ -101,8 +101,6 @@
             });
 
             $("#buttonLink1").click(function(){
-                user_num++;
-                localStorage.setItem("user_num", user_num);
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
                 var phone = prompt("What is your phone number?");
@@ -111,11 +109,11 @@
                 localStorage.setItem("email" + user_num, email);
                 localStorage.setItem("phone" + user_num, phone);
                 localStorage.setItem("password"+ user_num, password);
+                user_num++;
+                localStorage.setItem("user_num", user_num);
             });
 
             $("#buttonLink2").click(function(){
-                usernum--;
-                localStorage.setItem("user_num", user_num);
                 var name = prompt("What is your name?");
                 var password = prompt("What is your password?");
                 for (var i = 1; i <= user_num; i++)
@@ -126,6 +124,8 @@
                         localStorage.removeItem("email" + i);
                         localStorage.removeItem("phone" + i);
                         localStorage.removeItem("password" + i);
+                        usernum--;
+                        localStorage.setItem("user_num", user_num);
                     }
                 }
             });
