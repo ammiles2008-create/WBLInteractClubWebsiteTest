@@ -131,10 +131,12 @@
                         user_num--;
                         localStorage.setItem("user_num", user_num);
                         alert("You have been removed from the sign up list.");
-                        break;
                     }
                 }
-                alert("Name or password not found.");
+                if (localStorage.getItem("user" + i) != name || localStorage.getItem("password" + i) != password)
+                {
+                    alert("Name or password not found.");
+                }
             });
             $("#buttonLink3").click(function(){
                 var userList = "";
