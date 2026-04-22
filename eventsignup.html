@@ -105,12 +105,15 @@
                 var email = prompt("What is your email?");
                 var phone = prompt("What is your phone number?");
                 var password = prompt("What password would you like to use?");
-                localStorage.setItem("user" + user_num, name);
-                localStorage.setItem("email" + user_num, email);
-                localStorage.setItem("phone" + user_num, phone);
-                localStorage.setItem("password"+ user_num, password);
-                user_num++;
-                localStorage.setItem("user_num", user_num);
+                if (name != null && name != "")
+                {
+                    localStorage.setItem("user" + user_num, name);
+                    localStorage.setItem("email" + user_num, email);
+                    localStorage.setItem("phone" + user_num, phone);
+                    localStorage.setItem("password"+ user_num, password);
+                    user_num++;
+                    localStorage.setItem("user_num", user_num);
+                }
             });
 
             $("#buttonLink2").click(function(){
