@@ -113,6 +113,7 @@
                     localStorage.setItem("password"+ user_num, password);
                     user_num++;
                     localStorage.setItem("user_num", user_num);
+                    alert("You are now signed up!");
                 }
             });
 
@@ -127,10 +128,13 @@
                         localStorage.removeItem("email" + i);
                         localStorage.removeItem("phone" + i);
                         localStorage.removeItem("password" + i);
-                        usernum--;
+                        user_num--;
                         localStorage.setItem("user_num", user_num);
+                        alert("You have been removed from the sign up list.");
+                        break;
                     }
                 }
+                alert("Name or password not found.");
             });
             $("#buttonLink3").click(function(){
                 var userList = "";
