@@ -266,10 +266,12 @@
             $("#buttonLink2").click(function(){
                 var name = prompt("What is your name?");
                 var password = prompt("What is your password?");
+                var found = false;
                 for (var i = 1; i <= user_num; i++)
                 {
                     if (localStorage.getItem("user" + i) == name && localStorage.getItem("password" + i) == password)
                     {
+                        found = true;
                         localStorage.removeItem("user" + i);
                         localStorage.removeItem("email" + i);
                         localStorage.removeItem("phone" + i);
@@ -286,7 +288,11 @@
                         alert("You have been removed from the sign up list.");
                         break;
                     }
-                    alert("Name or password not found.");
+                    if (found == false)
+                    {
+                        alert("Name or password not found.");
+                    }
+                    found = false;
                 }
             });
             $("#buttonLink3").click(function(){
