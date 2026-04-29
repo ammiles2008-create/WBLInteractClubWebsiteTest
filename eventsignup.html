@@ -79,7 +79,7 @@
         </div>
 
         <script>
-            firebase.initialize({
+            /*firebase.initialize({
                 projectName: "interact-club-website"
             });
             var database = firebase.database();
@@ -89,15 +89,15 @@
                 {
                     user_num = data.userNum;
                 }
-            });
+            });*/
             
-            /*var user_num = localStorage.getItem("user_num");
+            var user_num = localStorage.getItem("user_num");
             if (!user_num) {
                 user_num = 0;
                 localStorage.setItem("user_num", user_num);
             } else {
                 user_num = parseInt(localStorage.getItem("user_num"));
-            }*/
+            }
 
             $("li a").hover(function(){
                 $(this).css("color", "black");
@@ -113,7 +113,7 @@
                 window.location.href = 'https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true';
             });
 
-            /* AI Potiental Solution*/
+            /* AI Solution (Doesn't Work)
             $("#buttonLink1").click(function(){
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
@@ -182,8 +182,9 @@
             database.ref().on("value", function(snapshot){
                 const data = snapshot.val();
                 localStorage.setItem("cachedUsers", JSON.stringify(data));
-            });
-            /*OG Firebase Solution (Commented Out for Now)
+            });*/
+
+            /*OG Firebase Solution (Doesn't Work)
             $("#buttonLink1").click(function(){
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
@@ -243,7 +244,7 @@
                 $("#list").html(userList);
             });*/
 
-            /* Local Storage Solution (Commented Out for Now)
+            //Local Storage Solution
             $("#buttonLink1").click(function(){
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
@@ -299,7 +300,7 @@
                     }
                 }
                 $("#list").html(userList);
-            });*/
+            });
         </script>
     </body>
 </html>
