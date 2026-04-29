@@ -113,6 +113,77 @@
                 window.location.href = 'https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true';
             });
 
+            /* AI Potiental Solution*/
+            $("#buttonLink1").click(function(){
+                var name = prompt("What is your name?");
+                var email = prompt("What is your email?");
+                var phone = prompt("What is your phone number?");
+                var password = prompt("What password would you like to use?");
+
+                if (!name) return;
+
+                const newUser = {
+                    _name: name,
+                    _email: email,
+                    _phone: phone,
+                    _password: password
+                };
+
+                // Save to Firebase
+                database.ref("user" + user_num).set(newUser);
+                database.ref("userNum").set({ userNum: user_num + 1 });
+
+                // Optional: also save to localStorage
+                localStorage.setItem("user" + user_num, JSON.stringify(newUser));
+
+                alert("You are now signed up!");
+            });
+
+            $("#buttonLink2").click(function(){
+                var name = prompt("What is your name?");
+                var password = prompt("What is your password?");
+
+                for (let i = 0; i < user_num; i++) {
+                    database.ref("user" + i).once("value", function(snapshot){
+                        const user = snapshot.val();
+                        if (user && user._name === name && user._password === password) {
+
+                            // Remove from Firebase
+                            database.ref("user" + i).remove();
+
+                            // Optional: remove from localStorage
+                            localStorage.removeItem("user" + i);
+
+                            alert("You have been removed.");
+                        }
+                    });
+                }
+            });
+
+            $("#buttonLink3").click(function(){
+                let userList = "";
+
+                for (let i = 0; i < user_num; i++) {
+                    database.ref("user" + i).once("value", function(snapshot){
+                        const user = snapshot.val();
+                        if (user) {
+                            userList += user._name + " | ";
+                            $("#list").html(userList);
+                        }
+                    });
+                }
+            });
+            
+            const cached = JSON.parse(localStorage.getItem("cachedUsers"));
+            if (cached) {
+                $("#list").html(cached.map(u => u._name).join(" | "));
+            }
+
+            database.ref().on("value", function(snapshot){
+                const data = snapshot.val();
+                localStorage.setItem("cachedUsers", JSON.stringify(data));
+            });
+            /*OG Firebase Solution (Commented Out for Now)
             $("#buttonLink1").click(function(){
                 var name = prompt("What is your name?");
                 var email = prompt("What is your email?");
@@ -170,7 +241,7 @@
                     
                 }
                 $("#list").html(userList);
-            });
+            });*/
 
             /* Local Storage Solution (Commented Out for Now)
             $("#buttonLink1").click(function(){
