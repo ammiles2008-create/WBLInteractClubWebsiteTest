@@ -112,7 +112,6 @@
 
             $("#buttonLink0").click(function(){
                 window.location.href = 'https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true';
-                localStorage.clear();
             });
 
             /* AI Solution (Doesn't Work)
@@ -265,6 +264,7 @@
             });
 
             $("#buttonLink2").click(function(){
+                var temp_user_num = user_num;
                 var name = prompt("What is your name?");
                 var password = prompt("What is your password?");
                 for (var i = 1; i <= user_num; i++)
@@ -286,7 +286,11 @@
                         localStorage.setItem("user_num", user_num);
                         alert("You have been removed from the sign up list.");
                     }
-                }               
+                }
+                if (temp_user_num == user_num)
+                {
+                    alert("Name or password not found.");
+                }
             });
             $("#buttonLink3").click(function(){
                 var userList = "";
