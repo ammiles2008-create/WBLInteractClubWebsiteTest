@@ -275,7 +275,7 @@
                         localStorage.removeItem("password" + i);
                         if (user_num > 1)
                         {
-                            user_num--;
+                            user_num = user_num - 1;
                         }
                         else
                         {
@@ -283,6 +283,7 @@
                         }                        
                         localStorage.setItem("user_num", user_num);
                         alert("You have been removed from the sign up list.");
+                        break;
                     }
                 }
                 if (localStorage.getItem("user" + i) != name || localStorage.getItem("password" + i) != password)
