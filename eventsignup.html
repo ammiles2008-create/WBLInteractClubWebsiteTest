@@ -92,10 +92,11 @@
             });*/
             
             var user_num = localStorage.getItem("user_num");
-            if (!user_num) {
+            if (user_num == null) {
                 user_num = 1;
                 localStorage.setItem("user_num", user_num);
-            } else {
+            }
+            else {
                 user_num = parseInt(localStorage.getItem("user_num"));
             }
 
@@ -285,9 +286,6 @@
                         alert("You have been removed from the sign up list.");
                         break;
                     }
-                }
-                if (localStorage.getItem("user" + i) != name || localStorage.getItem("password" + i) != password)
-                {
                     alert("Name or password not found.");
                 }
             });
