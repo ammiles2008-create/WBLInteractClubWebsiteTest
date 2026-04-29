@@ -144,7 +144,7 @@
                         {
                             database.ref("user" + i).remove();
                             database.ref("userNum").set({
-                                userNum: user_num + -,
+                                userNum: user_num - 1,
                             });
                             alert("You have been removed from the sign up list.");
                         }
@@ -155,6 +155,21 @@
                 {
                     alert("Name or password not found.");
                 }
+            });
+
+             $("#buttonLink3").click(function(){
+                var userList = "";
+                for (var i = 1; i <= user_num; i++)
+                {
+                    database.ref("user" + i).on('value', function(data){
+                        if (data._name == name && data._password == password)
+                        {
+                            userList += data._name + " | ";
+                        }
+                    });
+                    
+                }
+                $("#list").html(userList);
             });
 
             /* Local Storage Solution (Commented Out for Now)
