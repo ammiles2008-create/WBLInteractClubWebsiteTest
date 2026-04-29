@@ -112,6 +112,7 @@
 
             $("#buttonLink0").click(function(){
                 window.location.href = 'https://docs.google.com/document/d/e/2PACX-1vQRsMnCEnBc8T-G_LMz-TzOrOWabcyz-ZK29gjEHw2wZsa6UDpD-V4HsjctoUYQF0vwBcAmYc9elD0n/pub?embedded=true';
+                localStorage.clear();
             });
 
             /* AI Solution (Doesn't Work)
@@ -257,8 +258,8 @@
                     localStorage.setItem("email" + user_num, email);
                     localStorage.setItem("phone" + user_num, phone);
                     localStorage.setItem("password"+ user_num, password);
-                    user_num++;
                     localStorage.setItem("user_num", user_num);
+                    user_num++;
                     alert("You are now signed up!");
                 }
             });
